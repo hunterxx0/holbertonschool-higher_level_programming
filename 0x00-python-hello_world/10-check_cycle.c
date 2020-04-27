@@ -7,17 +7,15 @@
  */
 int check_cycle(listint_t *l)
 {
-	listint_t *c = l;
-	int xh = l->n;
-	if (l)
+	listint_t *s, *f;
+
+	f = s = l;
+	while (f && s && f->next)
 	{
-		c = c->next;
-		while (c)
-		{
-			if (c->n == xh && c->next)
-				return (1);
-			c = c->next;
-		}
+		s = s->next;
+		f = f->next->next;
+		if (s == f)
+			return (1);
 	}
 	return (0);
 }
