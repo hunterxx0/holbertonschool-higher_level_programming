@@ -11,13 +11,13 @@ int check_cycle(listint_t *l)
 	int xh = l->n;
 	if (l)
 	{
-	c = c->next;
-	while (c)
-	{
-		if (c->n == xh)
-			return (1);
 		c = c->next;
-	}
+		while (c)
+		{
+			if (c->n == xh && c->next)
+				return (1);
+			c = c->next;
+		}
 	}
 	return (0);
 }
