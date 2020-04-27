@@ -8,18 +8,14 @@
 int check_cycle(listint_t *l)
 {
 	listint_t *c = l;
-	int xh = l->n, xs = 0, t = 0;
+	int xh = l->n;
 
 	c = c->next;
-	xs = c->n;
-	l = l->next;
-	while (l)
+	while (c)
 	{
-		if (l->n == xh)
-			t++;
-		if (t && xs == l->n)
+		if (c->n == xh)
 			return (1);
-		l = l->next;
+		c = c->next;
 	}
 	return (0);
 }
