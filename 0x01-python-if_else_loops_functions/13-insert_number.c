@@ -13,10 +13,13 @@ listint_t *insert_node(listint_t **h, const int n)
 
 	if (!z)
 		return (NULL);
-	if (!*h)
-		return (NULL);
 	z->n = n;
 	z->next = NULL;
+	if (!*h)
+	{
+		*h = z;
+		return (z);
+	}
 	if ((*h)->n > n)
 	{
 		z->next = *h;
