@@ -5,3 +5,5 @@ def magic_calculation(a, b, c):
             return a * b - c
         else:
             return a + b
+    else:
+        return a + b
