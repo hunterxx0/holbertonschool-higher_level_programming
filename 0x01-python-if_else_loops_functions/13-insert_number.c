@@ -10,7 +10,7 @@ listint_t *insert_node(listint_t **h, const int n)
 {
 	listint_t *t, *x = *h, *z = (listint_t *)malloc(sizeof(listint_t));
 
-	if (z == NULL)
+	if (!z || !*h)
 		return (NULL);
 	z->n = n;
 	z->next = NULL;
