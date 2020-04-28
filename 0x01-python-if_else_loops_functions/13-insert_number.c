@@ -21,7 +21,7 @@ listint_t *insert_node(listint_t **h, const int n)
 	}
 	else
 	{
-		while (x)
+		while (x->next)
 		{
 			if (x->n > n)
 				break;
