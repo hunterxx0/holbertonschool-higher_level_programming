@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import hidden_4
-l = dir(hidden_4)
-n = []
-for a in l:
+lis = dir(hidden_4)
+new = []
+for a in lis:
     if a[0] != '_':
-        n.append(a)
-n.sort()
-print(*n, sep = "\n")
+        new.append(a)
+new.sort()
+for a in new:
+    print(a)
