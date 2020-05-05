@@ -1,5 +1,21 @@
 #include "lists.h"
+/**
+ * lenl? (- len list)?
+ *
+ * @h: input head
+ * Return: l
+ */
+int lenl(listint_t **h)
+{
+	int l;
 
+	while (t)
+	{
+		l++;
+		t = t->next;
+	}
+	return (l);
+}
 /**
  * revl? (- reverse list)?
  *
@@ -42,11 +58,7 @@ int is_palindrome(listint_t **h)
 
 	if (!t)
 		return (1);
-	while (t)
-	{
-		l++;
-		t = t->next;
-	}
+	l = len(h);
 	x = l;
 	t = *h;
 	lis = revl(h);
