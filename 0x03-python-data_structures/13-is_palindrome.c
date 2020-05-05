@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * lenl? (- len list)?
+ * lenls? (- len list)?
  *
  * @h: input head
  * Return: l
@@ -23,21 +23,11 @@ int lenls(listint_t **h)
  * @h: input head
  * Return: n
  */
-int *revl(listint_t **h)
+int *revl(listint_t **h, int *z)
 {
 	listint_t *t = *h;
-	int x = 0, *z;
+	int x = 0;
 
-	while (t)
-	{
-		x++;
-		t = t->next;
-	}
-	z = malloc(sizeof(int) * x);
-	if (!z)
-		return (NULL);
-	t = *h;
-	x = 0;
 	while (t)
 	{
 		z[x] = t->n;
@@ -60,9 +50,11 @@ int is_palindrome(listint_t **h)
 	if (!t)
 		return (1);
 	l = lenls(h);
+	lis = malloc(sizeof(int) * l);
+	if (!lis)
+		return (0);
+	lis = revl(h, lis);
 	x = l;
-	t = *h;
-	lis = revl(h);
 	while (t && i < x)
 	{
 		if (t->n != lis[l - 1])
