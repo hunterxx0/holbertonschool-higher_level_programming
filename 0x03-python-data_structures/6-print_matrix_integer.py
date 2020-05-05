@@ -6,9 +6,14 @@ def print_matrix_integer(matrix=[[]]):
             print()
             return
         x = len(matrix)
-        for i in range(0, x):
-            for j in range(0, y):
+        i = 0
+
+        while i < x:
+            j = 0
+            while j < y:
                 if j != y - 1:
                     print("{}".format(matrix[i][j]), end=' ')
                 else:
                     print("{}".format(matrix[i][j]))
+                j += 1
+            i += 1
