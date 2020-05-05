@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-if __name__ != "__main__":
-    def print_matrix_integer(matrix=[[]]):
-        y = len(matrix[0])
-        x = len(matrix)
-        i = 0
-        while i < x:
-            j = 0
-            while j < y:
-                if j != y - 1:
-                    print("{}".format(matrix[i][j]), end=' ')
-                else:
-                    print("{}".format(matrix[i][j]))
-                j += 1
-            i += 1
+def print_matrix_integer(matrix=[[]]):
+    i = 0
+    while i < len(matrix):
+        j = 0
+        while j < len(matrix[0]):
+            if j != len(matrix[0]) - 1:
+                print("{:d}".format(matrix[i][j]), end=' ')
+            else:
+                print("{:d}".format(matrix[i][j]))
+            j += 1
+        i += 1
+    if len(matrix[0]) == 0:
+        print()
