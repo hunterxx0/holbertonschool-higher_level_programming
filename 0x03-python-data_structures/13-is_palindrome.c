@@ -5,16 +5,17 @@
  * @h: input head
  * Return: l
  */
-int lenl(listint_t **h)
+int lenls(listint_t **h)
 {
-	int l;
+	int ln;
+	listint_t *t = *h;
 
 	while (t)
 	{
-		l++;
+		ln++;
 		t = t->next;
 	}
-	return (l);
+	return (ln);
 }
 /**
  * revl? (- reverse list)?
@@ -58,7 +59,7 @@ int is_palindrome(listint_t **h)
 
 	if (!t)
 		return (1);
-	l = len(h);
+	l = lenls(h);
 	x = l;
 	t = *h;
 	lis = revl(h);
