@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    if my_list is not None:
-        n = my_list[:]
-        if idx < 0 or len(my_list) - 1 < idx:
-            return n
-            n[idx] = element
+    n = my_list[:]
+    if idx < 0 or len(my_list) - 1 < idx:
         return n
-    else:
-        return None
+    n[idx] = element
+    return n
