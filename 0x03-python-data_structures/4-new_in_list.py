@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-def new_in_list(m, i, e):
-    n = m[:]
-    if i < 0 or len(m) < i:
+def new_in_list(my_list, idx, element):
+    n = my_list[:]
+    if idx < 0 or len(my_list) < idx:
         return n
-    n[i] = e
+    n[idx] = element
     return n
