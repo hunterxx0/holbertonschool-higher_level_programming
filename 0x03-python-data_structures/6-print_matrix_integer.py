@@ -3,9 +3,6 @@ if __name__ != "__main__":
     def print_matrix_integer(matrix=[[]]):
         y = len(matrix[0])
         x = len(matrix)
-        if y == 0:
-            print()
-            return
         i = 0
         while i < x:
             j = 0
