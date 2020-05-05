@@ -9,33 +9,29 @@ int lenls(listint_t **h)
 	}
 	return (ln);
 }
-int *revl(listint_t **h, int *z)
-{
-	listint_t *t = *h;
-	int x = 0;
-	while (t)
-	{
-		z[x] = t->n; x++; t = t->next;
-	}
-	return (z);
-}
 int is_palindrome(listint_t **h)
 {
 	listint_t *t = *h;
-	int l = 0, i = 0, x, *lis, r = 0;
-	if (!t)
+	int l = 0, i = 0, r = 0, s = 0;
+	if (!t || !t->next)
 		return (1);
-	l = lenls(h); lis = malloc(sizeof(int) * l);
-	if (!lis)
-		return (0);
-	lis = revl(h, lis); x = l;
-	while (i < x)
+	l = lenls(h);
+	while (t)
 	{
-		if (lis[i] != lis[l - 1])
-			break;
-		i++; l--;
-	} free(lis);
-	if (i == x)
+		if (i < l / 2)
+		s += t->n;
+		else
+		{
+			if (l % 2 != 0 && i == l / 2)
+				s += 0;
+			else
+				s -= t->n;
+		}
+		t = t->next;
+		i++;
+	}
+	printf("%d\n", s);
+	if (s == 0)
 		r = 1;
 	return (r);
 }
