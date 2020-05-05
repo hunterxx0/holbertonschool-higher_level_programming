@@ -29,7 +29,7 @@ int revl(listint_t **h, int *z)
 int is_palindrome(listint_t **h)
 {
 	listint_t *t = *h;
-	int l = 0, i = 0, x, lis[50], r = 0;
+	int l = 0, i = 0, x, lis[100], r = 0;
 
 	if (!t)
 		return (1);
