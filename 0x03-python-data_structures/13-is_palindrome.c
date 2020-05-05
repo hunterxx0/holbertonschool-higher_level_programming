@@ -7,7 +7,7 @@
  */
 int lenls(listint_t **h)
 {
-	int ln;
+	int ln = 0;
 	listint_t *t = *h;
 
 	while (t)
@@ -26,7 +26,7 @@ int lenls(listint_t **h)
 int *revl(listint_t **h)
 {
 	listint_t *t = *h;
-	int x, *z;
+	int x = 0, *z;
 
 	while (t)
 	{
