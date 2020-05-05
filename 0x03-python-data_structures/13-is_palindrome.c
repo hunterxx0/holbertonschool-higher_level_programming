@@ -26,11 +26,12 @@ int lenls(listint_t **h)
 int is_palindrome(listint_t **h)
 {
 	listint_t *t = *h;
-	int l = 0, i = 0, r = 0, s = 0;
+	int l = 0, i = 0, r = 0, s = 0, x1 = 0, x2 = 0;
 
 	if (!t || !t->next)
 		return (1);
 	l = lenls(h);
+	x1 = t->n;
 	while (t)
 	{
 		if (i < l / 2)
@@ -42,10 +43,12 @@ int is_palindrome(listint_t **h)
 			else
 				s -= t->n;
 		}
+		x2 = t->n;
 		t = t->next;
 		i++;
 	}
-	if (s == 0)
+
+	if (s == 0 && x1 == x2)
 		r = 1;
 	return (r);
 }
