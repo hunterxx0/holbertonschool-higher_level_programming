@@ -7,8 +7,7 @@ def weight_average(m=[]):
     if m is None:
         return 0
     s, z = 0, 0
-    for x in m:
-        s += mul(x[0], x[1])
-        z += x[1]
-    s /= z
-    return s
+    for x, y in m:
+        s += mul(x, y)
+        z += y
+    return s / z
