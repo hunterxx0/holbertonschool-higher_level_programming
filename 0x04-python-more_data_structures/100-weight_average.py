@@ -1,11 +1,14 @@
 #!/usr/bin/python3
+def mul(x, y):
+    return x * y
+
+
 def weight_average(m=[]):
     if m is None:
         return 0
-    mul = lambda x, y: x * y
     s, z = 0, 0
     for x in m:
-       s += mul(x[0], x[1])
-       z += x[1]
+        s += mu(x[0], x[1])
+        z += x[1]
     s /= z
     return s
