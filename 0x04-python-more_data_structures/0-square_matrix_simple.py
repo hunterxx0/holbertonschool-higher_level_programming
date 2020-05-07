@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if matrix:
+    if matrix is not None:
         m = []
         i = 0
         ls = []
