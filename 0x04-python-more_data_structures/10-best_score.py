@@ -8,6 +8,6 @@ def best_score(a_dictionary):
             s = key
         if a_dictionary[key] > a_dictionary[s]:
             s = key
-    if a_dictionary[s]:
+    if s not in a_dictionary.keys():
         return None
     return s
