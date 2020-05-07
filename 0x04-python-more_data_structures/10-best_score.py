@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
+    if a_dictionary is None:
+        return None
     s = ""
     for key in a_dictionary.keys():
         if len(s) == 0:
