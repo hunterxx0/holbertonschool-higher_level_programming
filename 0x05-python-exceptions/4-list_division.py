@@ -17,7 +17,7 @@ def list_division(my_list_1, my_list_2, list_length):
             ls.append(s)
             break
         finally:
-            print("",end="")
+            print("", end="")
         ls.append(s)
         i += 1
     return ls
