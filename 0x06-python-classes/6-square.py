@@ -7,20 +7,8 @@ class Square:
     """a class Square with size management
     """
     def __init__(self, size=0, position=(0, 0)):
-        if isinstance(size, int):
-            if size < 0:
-                raise TypeError('size must be >= 0')
-            else:
-                self.__size = size
-        else:
-            raise TypeError('size must be an integer')
-
-        if not isinstance(position, tuple) or len(position) != 2\
-           or not isinstance(position[0], int) or position[0] < 0\
-           or not isinstance(position[1], int) or position[1] < 0:
-            raise TypeError('position must be a tuple of 2 positive integers')
-        else:
-            self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
