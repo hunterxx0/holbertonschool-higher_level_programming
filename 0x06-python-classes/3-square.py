@@ -7,8 +7,6 @@ class Square:
     """a class Square with size management
     """
     def __init__(self, size=0):
-"""sets the size after verifying
-"""
         if isinstance(size, int):
             if size < 0:
                 raise TypeError('size must be >= 0')
@@ -18,6 +16,4 @@ class Square:
             raise TypeError('size must be an integer')
 
     def area(self):
-"""returns area of a square
-"""
         return self.__size ** 2
