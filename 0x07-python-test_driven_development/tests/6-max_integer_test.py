@@ -15,6 +15,12 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([1, 5, 10]), 10)
 
+    def tests_max_mid(self):
+        """
+        Tests fuction's output when the max number is the last
+        """
+        self.assertEqual(max_integer([1, 10, 5]), 5)
+
     def tests_max_zero(self):
         """
         Tests fuction's output with negative and zero
