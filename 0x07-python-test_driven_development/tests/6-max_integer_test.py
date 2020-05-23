@@ -19,7 +19,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         Tests fuction's output when the max number is the last
         """
-        self.assertEqual(max_integer([1, 10, 5]), 5)
+        self.assertEqual(max_integer([1, 10, 5]), 10)
 
     def tests_max_zero(self):
         """
