@@ -22,7 +22,7 @@ def matrix_mul(m_a, m_b):
             raise TypeError('m_b must be a list of lists')
     if m_a is None or any(x is None for x in m_a):
         raise ValueError("m_a can't be empty")
-    if m_b in None or any(y is None for y in m_b):
+    if m_b is None or any(y is None for y in m_b):
         raise ValueError("m_b can't be empty")
     for x in m_a:
         for y in x:
