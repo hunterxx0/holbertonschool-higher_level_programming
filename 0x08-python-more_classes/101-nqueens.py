@@ -21,6 +21,7 @@ def freepos(N, b, s, i):
             return False
     return True
 
+
 def check(b, N, s=0):
     """
     if it's safe to put the queen it makes the change 0 to 1
@@ -34,18 +35,20 @@ def check(b, N, s=0):
             check(b, N, s + 1)
             b[s][i] = 0
 
+
 def printsol(b, N):
     """
     prints the coordinates of the right pos
     """
-    print("[", end = "")
+    print("[", end="")
     for i in range(N):
         for j in range(N):
             if b[i][j] == 1:
-                print("[{}, {}]".format(i, j), end = "")
+                print("[{}, {}]".format(i, j), end="")
                 if i < N - 1:
-                    print(", ", end = "")
+                    print(", ", end="")
     print("]")
+
 
 def main():
     """
