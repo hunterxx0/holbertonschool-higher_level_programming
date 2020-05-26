@@ -5,6 +5,7 @@ a LockedClass
 
 """
 
+
 class LockedClass:
     """
     Defining the LockedClass
