@@ -1,0 +1,50 @@
+    >>> base = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+    >>> b = base()
+    >>> b.integer_validator("my_int", 12)
+    >>> b.integer_validator("s", 5)
+    >>> b.integer_validator("", 1)
+
+    >>> b.integer_validator(1, 12)
+
+    >>> b.integer_validator("my", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: my must be greater than 0
+
+    >>> b.integer_validator("int", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: int must be greater than 0
+
+    >>> b.integer_validator(None, 1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: None must be an integer
+
+    >>> b.integer_validator("int", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: int must be an integer
+
+    >>> b.integer_validator("int", "sss")
+    Traceback (most recent call last):
+    ...
+    TypeError: int must be an integer
+
+    >>> b.integer_validator("int", 1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: int must be an integer
+
+    >>> b.integer_validator("int")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> b.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
