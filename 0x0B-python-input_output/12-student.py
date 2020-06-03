@@ -14,7 +14,6 @@ class Student:
         """
         init funct
         """
-
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -31,4 +30,7 @@ class Student:
                 return self.__dict__
             if x in self.__dict__:
                 dt[x] = self.__dict__[x]
-        return dt
+        if len(dt) == len(self.__dict__):
+            return self.__dict__
+        else:
+            return dt
