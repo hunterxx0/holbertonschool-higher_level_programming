@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Writes a text in a file function: write_file()
->>> write_file("a.txt", "text")
-1 line
+"""Writes a text in a file function: write_file()
 """
 import sys
 import signal
+
 
 def sighand(signal, frame):
     print("File size: {}".format(ss[8][:-1]))
@@ -15,6 +13,7 @@ def sighand(signal, frame):
         if dt[x] != 0:
             print("{}: {}".format(x, dt[x]))
     raise KeyboardInterrupt
+
 
 signal.signal(signal.SIGINT, sighand)
 
