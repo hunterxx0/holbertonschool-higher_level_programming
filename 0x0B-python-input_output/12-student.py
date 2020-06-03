@@ -30,4 +30,6 @@ class Student:
                 return self.__dict__
             if x in self.__dict__:
                 dt[x] = self.__dict__[x]
+        if len(dt) == 0:
+            return self.__dict__
         return dt
