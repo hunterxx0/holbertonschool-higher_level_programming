@@ -31,3 +31,7 @@ class Student:
             if x in self.__dict__:
                 dt[x] = self.__dict__[x]
         return dt
+
+    def reload_from_json(self, json):
+        for i in json:
+            setattr(self, i, json[i])
