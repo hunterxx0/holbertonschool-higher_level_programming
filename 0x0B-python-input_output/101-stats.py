@@ -18,7 +18,7 @@ dt = {
     '500': 0
 
 }
-c = 0
+c = 1
 for line in sys.stdin:
     ss = line.split(' ')
     if ss[7] in dt:
