@@ -10,6 +10,31 @@ Now use it:
     >>> b = base()
     >>> b.integer_validator(1, 12)
 
+    >>> b.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> b.integer_validator("tt", (1,))
+    Traceback (most recent call last):
+    ...
+    TypeError: tt must be an integer
+
+    >>> b.integer_validator("tt", [1])
+    Traceback (most recent call last):
+    ...
+    TypeError: tt must be an integer
+
+    >>> b.integer_validator("tt", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: tt must be an integer
+
+    >>> b.integer_validator("tt", {1, 2})
+    Traceback (most recent call last):
+    ...
+    TypeError: tt must be an integer
+
     >>> b.integer_validator("my", 0)
     Traceback (most recent call last):
     ...
