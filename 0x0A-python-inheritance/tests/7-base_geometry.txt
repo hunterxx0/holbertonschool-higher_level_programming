@@ -7,6 +7,7 @@ Now use it:
     >>> b.integer_validator("s", 5)
     >>> b.integer_validator("", 1)
 
+    >>> b = base()
     >>> b.integer_validator(1, 12)
 
     >>> b.integer_validator("my", 0)
