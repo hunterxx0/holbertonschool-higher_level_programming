@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-"""
-14-main
-"""
-pascal_triangle = __import__('14-pascal_triangle').pascal_triangle
+Student = __import__('12-student').Student
 
-def print_triangle(triangle):
-    """
-    Print the triangle
-    """
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
+def print_dict(d, t=0):
+    keys = list(d.keys())
+    keys.sort()
+    for k in keys:
+        v = d[k]
+        if type(v) is dict:
+            t += 1
+            print_dict(v, t)
+        else:
+            print("{}{} => {} / {}".format("\t" * t, k, v, type(v)))
 
+student = Student("Tom", "Smith", 89)
 
-if __name__ == "__main__":
-    print_triangle(pascal_triangle(-6))
+j_student = student.to_json([])
+print(type(j_student))
+print_dict(j_student)
