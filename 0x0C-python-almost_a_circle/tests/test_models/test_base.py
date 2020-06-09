@@ -33,8 +33,3 @@ class TestBase(unittest.TestCase):
         b2 = Base(5)
         self.assertEqual(b1.id, 999)
         self.assertEqual(b2.id, 5)
-
-"""
-if __name__ == '__main__':
-    unittest.main()
-"""
