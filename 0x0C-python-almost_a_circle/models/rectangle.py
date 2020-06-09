@@ -13,6 +13,7 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """init funct"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -21,10 +22,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width get funct"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width set funct"""
         if type(value) is not int:
             raise TypeError('width must be an integer')
         if value <= 0:
@@ -33,10 +36,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """height get funct"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height set funct"""
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
@@ -45,10 +50,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x get funct"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """x set funct"""
         if type(value) is not int:
             raise TypeError('x must be an integer')
         if value < 0:
@@ -58,10 +65,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y set funct"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """y get funct"""
         if type(value) is not int:
             raise TypeError('y must be an integer')
         if value < 0:
@@ -69,6 +78,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """area funct"""
         return self.__height * self.__width
 
     def display(self):
@@ -82,10 +92,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """str magic funct"""
         return ("[Rectangle] ({}) \
 {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """update funct"""
         if args and len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -112,6 +124,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """dict funct"""
         dt = {}
         dt["x"] = self.__x
         dt["y"] = self.__y
