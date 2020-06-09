@@ -23,6 +23,7 @@ class Square(Rectangle):
         self.__size = value
 
     def area(self):
+        """ area """
         return self.__size ** 2
 
     def __str__(self):
