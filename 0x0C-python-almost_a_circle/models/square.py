@@ -30,6 +30,7 @@ class Square(Rectangle):
 - {}".format(self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
+        """ upd """
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -52,6 +53,7 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
+        """ dict """
         dt = {}
         dt["x"] = self.x
         dt["y"] = self.y
