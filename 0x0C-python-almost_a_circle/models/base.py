@@ -1,18 +1,12 @@
 #!/usr/bin/python3
-"""
-Base class
-
-
-"""
+""" Base class """
 import csv
 import json
 from os import path
 
 
 class Base:
-    """
-    Base class
-    """
+    """ Base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
