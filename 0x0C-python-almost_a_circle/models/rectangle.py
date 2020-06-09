@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-""" class rect """
+"""
+
+class rect
+
+
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ class rect """
+    """
+    class rect
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -46,7 +53,6 @@ class Rectangle(Base):
             raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
-
         self.__x = value
 
     @property
@@ -62,9 +68,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ area """
         return self.__height * self.__width
 
     def display(self):
+        """ disp """
         for y in range(self.__y):
             print()
         for i in range(self.__height):
@@ -79,6 +87,7 @@ class Rectangle(Base):
 {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """ upd """
         if args and len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -105,6 +114,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """ dict """
         dt = {}
         dt["x"] = self.x
         dt["y"] = self.y
