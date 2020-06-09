@@ -35,4 +35,4 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b1.id, 999)
         self.assertEqual(b2.id, 5)
 
-#    def 
+#    def
