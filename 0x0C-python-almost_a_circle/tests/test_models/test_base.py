@@ -33,17 +33,3 @@ class TestBase(unittest.TestCase):
         b2 = Base(5)
         self.assertEqual(b1.id, 999)
         self.assertEqual(b2.id, 5)
-
-    def test_extra_arg(self):
-        with self.assertRaises(TypeError) as e:
-            err = "__init__() takes from 1 to 2 positional \
-arguments but 3 were given"
-            b = Base(1, 2)
-        self.assertEqual(err, str(e.exception))
-
-    def test_no_arg(self):
-        with self.assertRaises(TypeError) as e:
-            err = "__init__() missing 1 required positional \
-argument: 'self'"
-            Base.__init__()
-        self.assertEqual(err, str(e.exception))
