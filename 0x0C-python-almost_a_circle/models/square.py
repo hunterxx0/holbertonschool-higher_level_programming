@@ -56,5 +56,5 @@ class Square(Rectangle):
         dt["x"] = self.x
         dt["y"] = self.y
         dt["id"] = self.id
-        dt["size"] = self.__size
+        dt["size"] = self.size
         return dt
