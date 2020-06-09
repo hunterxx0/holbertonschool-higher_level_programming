@@ -12,7 +12,6 @@ class TestBase(unittest.TestCase):
     def test_1_id_base(self):
         b = Base()
         self.assertEqual(b.id, 1)
-        self.assertEqual(b.__dict__, {"id": 1})
 
     def test_2_id_base(self):
         b1 = Base()
@@ -35,4 +34,16 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b1.id, 999)
         self.assertEqual(b2.id, 5)
 
-#    def
+    def test_extra_arg(self):
+        with self.assertRaises(TypeError) as e:
+            err = "__init__() takes from 1 to 2 positional \
+arguments but 3 were given"
+            b = Base(1, 2)
+        self.assertEqual(err, str(e.exception))
+
+    def test_no_arg(self):
+        with self.assertRaises(TypeError) as e:
+            err = "__init__() missing 1 required positional \
+argument: 'self'"
+            Base.__init__()
+        self.assertEqual(err, str(e.exception))
