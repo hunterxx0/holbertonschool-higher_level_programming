@@ -42,7 +42,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        z = cls(1, 1, 1)
+        if cls.__name__ == 'Rectangle':
+            z = cls(1, 1)
+        else:
+            z = cls(1)
         z.update(**dictionary)
         return z
 
