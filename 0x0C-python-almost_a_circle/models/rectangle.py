@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle Class
+"""Rectangle Class.
 """
 from models.base import Base
 
@@ -7,7 +7,7 @@ from models.base import Base
 class Rectangle(Base):
     """
 
-    Rectangle class
+    Rectangle class.
 
     """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -124,10 +124,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """dict funct"""
         dt = {}
-        dt["x"] = self.__x
-        dt["y"] = self.__y
+        dt["x"] = self.x
+        dt["y"] = self.y
         dt["id"] = self.id
-        dt["width"] = self.__width
-        dt["height"] = self.__height
+        dt["width"] = self.width
+        dt["height"] = self.height
         return dt
-
