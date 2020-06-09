@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""Rectangle Class.
-"""
+""" Rectangle Class """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """
-
-    Rectangle class.
-
-    """
+    """ Rectangle class """
     def __init__(self, width, height, x=0, y=0, id=None):
         """init funct"""
         super().__init__(id)
