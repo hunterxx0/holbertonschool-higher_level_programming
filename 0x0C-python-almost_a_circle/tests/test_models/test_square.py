@@ -57,7 +57,7 @@ class TestRec(unittest.TestCase):
         self.assertEqual(b1.x, 97)
         self.assertEqual(b1.y, 96)
         b1.update(size=1, y=1)
-        self.assertEqual(b1.width, 2)
+        self.assertEqual(b1.width, 1)
         self.assertEqual(b1.size, 1)
         self.assertEqual(b1.y, 1)
 

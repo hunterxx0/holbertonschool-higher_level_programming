@@ -12,6 +12,7 @@ class TestBase(unittest.TestCase):
     def test_1_id_base(self):
         b = Base()
         self.assertEqual(b.id, 1)
+        self.assertEqual(b.__dict__, {"id": 1})
 
     def test_2_id_base(self):
         b1 = Base()
@@ -33,3 +34,5 @@ class TestBase(unittest.TestCase):
         b2 = Base(5)
         self.assertEqual(b1.id, 999)
         self.assertEqual(b2.id, 5)
+
+#    def 
