@@ -13,6 +13,6 @@ if __name__ == "__main__":
 states.id".format(argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        print("{}".format(row))
     cur.close()
     conn.close()
