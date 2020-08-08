@@ -16,6 +16,6 @@ if __name__ == "__main__":
         ss += row[0]
         if row[0] not in query_rows[len(query_rows)-1]:
             ss += ', '
-    print (ss)
+    print(ss)
     cur.close()
     conn.close()
