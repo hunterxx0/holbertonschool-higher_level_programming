@@ -12,16 +12,8 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(argv[1], argv[2], argv[3]))
     session = sessionmaker(bind=engine)()
-    states = session.query(State, City).filter(
-        State.id == City.state_id).order_by(State.id, City.id)
-    prev = 0
-    for stt, ct in states:
-        if prev == 0 or stt != prev:
-            prev = stt
-            flag = 1
-        if flag == 1:
-            print("{}: {}".format(stt.id, stt.name))
-            print("\t{}: {}".format(ct.id, ct.name))
-            flag = 0
-        elif flag == 0:
+    states = session.query(State).order_by(State.id)
+    for stt in states:
+        print("{}: {}".format(stt.id, stt.name))
+        for ct in stt.cities:
             print("\t{}: {}".format(ct.id, ct.name))
