@@ -23,13 +23,13 @@ def find_peak(list_of_integers):
         hi = l_arr - 1
         while(lo <= hi):
             if lo == hi:
-                return lo
-            mid = lo + (hi - lo) // 2
+                return list_of_integers[lo]
+            mid = int(lo + (hi - lo) / 2)
             if list_of_integers[mid] < list_of_integers[mid + 1]:
                 lo = mid + 1
             else:
                 hi = mid
-        return (999)
+        return None
 
 
 
