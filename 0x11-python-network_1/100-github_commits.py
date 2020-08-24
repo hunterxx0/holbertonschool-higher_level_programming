@@ -9,7 +9,7 @@ if __name__ == "__main__":
         argv[2], argv[1])).json()
     c = 0
     for lines in res:
-        print("{} {}".format(lines.get('sha'),
+        print("{}: {}".format(lines.get('sha'),
                              lines.get('commit').get('author').get('name')))
         c += 1
         if c == 10:
