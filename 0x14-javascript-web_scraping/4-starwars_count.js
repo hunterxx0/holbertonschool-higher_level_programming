@@ -8,10 +8,12 @@ request(args[0], function (error, response, body) {
   let count = 0;
   const res = JSON.parse(body).results;
   for (const x in res) {
-    for (const charac in res[x].characters) {
-      if (res[x].characters[charac] &&
-          res[x].characters[charac].slice(37, -1) === '18') {
-        count++;
+    if (res[x].characters) {
+      for (const charac in res[x].characters) {
+	if (res[x].characters[charac] &&
+            res[x].characters[charac].slice(37, -1) === '18') {
+          count++;
+	}
       }
     }
   }
