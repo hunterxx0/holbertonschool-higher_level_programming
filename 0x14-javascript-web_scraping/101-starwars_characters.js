@@ -15,8 +15,10 @@ request(url, function (error, response, body) {
       }
       result[x] = JSON.parse(body1).name;
       if (x === res.length - 1) {
-        for (const z in result) {
-          console.log(result[z]);
+        for (let z = 0; z < res.length; z++) {
+          if (result[z]) {
+            console.log(result[z]);
+          }
         }
       }
     });
