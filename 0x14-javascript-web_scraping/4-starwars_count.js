@@ -10,10 +10,11 @@ request(args[0], function (error, response, body) {
   for (const x in res) {
     if (res[x].characters) {
       for (const charac in res[x].characters) {
-	if (res[x].characters[charac] &&
-            res[x].characters[charac].slice(37, -1) === '18') {
+        if (res[x].characters[charac] &&
+            res[x].characters[charac] ===
+            'https://swapi-api.hbtn.io/api/people/18/') {
           count++;
-	}
+        }
       }
     }
   }
