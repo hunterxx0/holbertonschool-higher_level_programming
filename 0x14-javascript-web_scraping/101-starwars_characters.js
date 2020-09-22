@@ -7,22 +7,20 @@ request(url, function (error, response, body) {
     return console.log(error);
   }
   const result = {};
-  if (JSON.parse(body).characters) {
-    const res = JSON.parse(body).characters;
-    for (let x = 0; x < res.length; x++) {
-      request(res[x], function (error1, response1, body1) {
-        if (error) {
-          return console.log(error);
-        }
-        result[x] = JSON.parse(body1).name;
-        if (x === res.length - 1) {
-          for (let z = 0; z < res.length; z++) {
-            if (result[z]) {
-              console.log(result[z]);
-            }
+  const res = JSON.parse(body).characters;
+  for (let x = 0; x < res.length; x++) {
+    request(res[x], function (error1, response1, body1) {
+      if (error) {
+        return console.log(error);
+      }
+      result[x] = JSON.parse(body1).name;
+      if (x === res.length - 1) {
+        for (let z = 0; z < res.length; z++) {
+          if (result[z]) {
+            console.log(result[z]);
           }
         }
-      });
-    }
+      }
+    });
   }
 });
